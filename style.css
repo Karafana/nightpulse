@@ -1,0 +1,29 @@
+:root{
+  --bg1:#081020;
+  --bg2:#0b1228;
+  --ui: rgba(255,255,255,0.14);
+  --accent:#ffd24a;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg1),var(--bg2));font-family:'Press Start 2P', monospace;color:#fff;-webkit-font-smoothing:none}
+.screen{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:linear-gradient(180deg,rgba(0,0,0,0.6),transparent);z-index:20;padding:20px;text-align:center}
+.title{font-size:20px;letter-spacing:2px;color:var(--accent);text-shadow:0 0 6px rgba(255,210,74,0.12)}
+.title.small{font-size:18px}
+.greet{font-size:10px;color:#d0d8e6}
+#nick{padding:10px;border-radius:6px;border:2px solid rgba(255,255,255,0.06);background:#071018;color:#fff;width:220px;text-align:center;font-size:10px}
+button{padding:10px 14px;border:none;border-radius:8px;background:var(--accent);color:#000;cursor:pointer;box-shadow:0 0 10px rgba(255,210,74,0.08)}
+.hint{font-size:9px;color:#9fb0d4}
+
+canvas#game{position:fixed;left:0;top:0;width:100vw;height:100vh;image-rendering:pixelated;z-index:1}
+
+/* controls */
+#controls{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;display:flex;gap:10px;align-items:center;z-index:30;pointer-events:auto}
+.ctl{width:70px;height:70px;border-radius:12px;background:rgba(255,255,255,0.08);backdrop-filter: blur(2px);border:2px solid rgba(255,255,255,0.04);font-size:26px;color:#fff;display:flex;align-items:center;justify-content:center;touch-action:none}
+.vcol{display:flex;flex-direction:column;gap:8px}
+@media(min-width:800px){ #controls{display:none} }
+
+/* end texts */
+.sub{font-size:10px;color:#ffd24a;margin-bottom:6px}
+
+/* small HUD in corner */
+.hud{position:fixed;left:8px;top:8px;font-size:10px;color:#dfeaf8;z-index:25;background:rgba(0,0,0,0.2);padding:6px;border-radius:6px;border:1px solid rgba(255,255,255,0.02)}

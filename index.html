@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>NightPulse - Pixel City</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="startScreen" class="screen">
+    <div class="title">NIGHTPULSE</div>
+    <div class="greet">Привет, <span id="nickPreview">ассасин</span>!</div>
+    <input id="nick" type="text" placeholder="Введи ник" inputmode="text" maxlength="20" />
+    <button id="startBtn">НАЧАТЬ</button>
+    <div class="hint">Управление: кнопки внизу экрана (мобильные)</div>
+  </div>
+
+  <canvas id="game"></canvas>
+
+  <!-- touch controls -->
+  <div id="controls">
+    <button class="ctl" id="left">◀</button>
+    <div class="vcol">
+      <button class="ctl" id="up">▲</button>
+      <button class="ctl" id="down">▼</button>
+    </div>
+    <button class="ctl" id="right">▶</button>
+  </div>
+
+  <div id="endScreen" class="screen" style="display:none;">
+    <div class="title small" id="endTitle"></div>
+    <div class="sub" id="endSub"></div>
+    <button id="retry">СЫГРАТЬ СНОВА</button>
+  </div>
+
+<script src="game.js"></script>
+</body>
+</html>
